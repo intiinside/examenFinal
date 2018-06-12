@@ -1,0 +1,61 @@
+<div class="row" style="padding-top: 40px;">
+  <div class="col-sm-1"></div>
+  <div class="col-sm-5" style="padding-top: 60px;">
+    <app-carrusel></app-carrusel>
+  </div>
+  <div class="col-sm-4">
+    <app-crear-cabecera (entrenadorCreado)="agregarEntrenador($event)"></app-crear-cabecera>
+  </div>
+  <div class="col-sm-1"></div>
+</div>
+<br>
+<div class="row">
+  <div class="col-sm-1"></div>
+  <div class="col-sm-10"><hr /></div>
+  <div class="col-sm-1"></div>
+</div>
+<br>
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8">
+    <div class="row">
+      <div *ngFor="let entrenador of arregloEntrenador let indice of index" class="col-sm-2">
+        <button mat-raised-button color="primary" (click)="seleccionarCabecera(entrenador)">
+          {{entrenador.nombres + " " + entrenador.apellidos}}
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-2"></div>
+</div>
+<br>
+<div class="row">
+  <div class="col-sm-1"></div>
+  <div class="col-sm-10"><hr /></div>
+  <div class="col-sm-1"></div>
+</div>
+<br>
+<div class="row" style="padding-top: 20px;">
+  <div class="col-sm-1"></div>
+  <div class="col-sm-4">
+    <app-crear-detalle (pokemonCreado)="agregarPokemon($event)" *ngIf="entrenadorSeleccionado.nombres!==undefined"></app-crear-detalle>
+  </div>
+  <div class="col-sm-2"></div>
+  <div class="col-sm-4" style="padding-top: 40px">
+    <p-card title="{{entrenadorSeleccionado.nombres}} {{entrenadorSeleccionado.apellidos }}" [style]="{width: '360px'}" *ngIf="entrenadorSeleccionado.nombres!==undefined">
+      <div>El entrenador nació el: {{entrenadorSeleccionado.fechaNacimiento}}, tiene
+        {{entrenadorSeleccionado.numeroMedallas}}
+        y
+        {{entrenadorSeleccionado.campeonActual}} tiene seguro</div>
+    </p-card>
+  </div>
+  <div class="col-sm-1"></div>
+</div>
+
+<div class="row" style="padding-top: 100px;">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8" style="padding-bottom: 60px">
+    <app-tabla-primeng [datosTablaDetalle]="entrenadorSeleccionado.Pokemon" *ngIf="entrenadorSeleccionado.Pokemon.length!==0"></app-tabla-primeng>
+  </div>
+  <div class="col-sm-2"></div>
+</div>

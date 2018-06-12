@@ -1,0 +1,89 @@
+<div>
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-8">
+      <h3>CREAR ENTRENADOR</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4">
+      <label style="padding-top: 20px"> Nombres</label>
+    </div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4">
+      <mat-form-field style="width: 130px">
+        <input matInput placeholder="Nombres" name="nombres" [(ngModel)]="entrenador.nombres">
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4">
+      <label style="padding-top: 20px"> Apellidos</label>
+    </div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4">
+      <mat-form-field style="width: 130px">
+        <input matInput placeholder="Apellidos" name="apellidos" [(ngModel)]="entrenador.apellidos">
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4">
+      <label style="padding-top: 20px"> Fecha Nacimiento</label>
+    </div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4">
+      <mat-form-field style="width: 130px">
+        <input matInput placeholder="Fecha Nacimiento" name="fechaNacimiento" [(ngModel)]="entrenador.fechaNacimiento">
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4">
+      <label style="padding-top: 20px"> Numero de Medallas</label>
+    </div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4">
+      <mat-form-field style="width: 130px">
+        <input matInput placeholder="Numero de medallas" name="numeroMedallas" [(ngModel)]="entrenador.numeroMedallas">
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4">
+      <label style="padding-top: 20px">Campeon actual</label>
+    </div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4">
+      <mat-form-field style="width: 130px">
+        <input matInput placeholder="Campeon actual" name="campeonActual" [(ngModel)]="entrenador.campeonActual">
+
+
+      </mat-form-field>
+
+    </div>
+    <!--div class="col-sm-1"></div-->
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-3">
+      <button mat-raised-button color="#800000" (click)="limpiar()">Limpiar</button>
+    </div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4">
+      <button mat-raised-button color="#800000" (click)="guardarEnArreglo()">Crear</button>
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+</div>

@@ -1,0 +1,88 @@
+<div>
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-10">
+      <h3>CREAR POKEMON</h3>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-6">
+      <label>Numero Pokemon</label>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-4">
+      <input id="numeroPokemon" type="text" size="10" pInputText name="numeroPokemon" [(ngModel)]="pokemon.numeroPokemon">
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-6">
+      <label>Nombre Pokemon</label>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-4">
+      <input id="nombrePokemon" type="text" size="10" pInputText name="nombrePokemon" [(ngModel)]="pokemon.nombrePokemon">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-6">
+      <label>Poder especial Uno</label>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-4">
+      <input id="poderEspecialUno" type="text" size="10" pInputText name="poderEspecialUno" [(ngModel)]="pokemon.poderEspecialUno">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-6">
+      <label>Poder Especial Dos</label>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-4">
+      <input id="poderEspecialDos" type="text" size="10" pInputText name="poderEspecialDOs" [(ngModel)]="pokemon.poderEspecialDos">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-6">
+      <label>Fecha Captura</label>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-4">
+      <input id="fechaCaptura" type="text" size="10" pInputText name="fechaCaptura" [(ngModel)]="pokemon.fechaCaptura">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-6">
+      <label>Nivel</label>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-4">
+      <input id="nivel" type="text" size="10" pInputText name="nivel" [(ngModel)]="pokemon.nivel">
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4">
+      <button type="button" class="btn btn-secondary" (click)="limpiar()">Limpiar</button>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-4">
+      <button type="button" class="btn btn-secondary" (click)="guardarEnArreglo()">Crear</button>
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+</div>

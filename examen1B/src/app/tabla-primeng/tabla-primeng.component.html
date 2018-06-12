@@ -1,0 +1,22 @@
+<p-table [value]="datosTablaDetalle">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Numero Pokemon</th>
+      <th>Nombre Pokemon</th>
+      <th>Poder Especial 1</th>
+      <th>Poder Especial 2</th>
+      <th>Fecha Captura</th>
+      <th>nivel</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-datosTablaDetalle>
+    <tr>
+      <td>{{datosTablaDetalle.numeroPokemon}}</td>
+      <td>{{datosTablaDetalle.nombrePokemon}}</td>
+      <td>{{datosTablaDetalle.poderEspecialUno}}</td>
+      <td>{{datosTablaDetalle.poderEspecialDos}}</td>
+      <td>{{datosTablaDetalle.fechaCaptura}}</td>
+      <td>{{datosTablaDetalle.nivel}}</td>
+    </tr>
+  </ng-template>
+</p-table>
